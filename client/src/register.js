@@ -6,16 +6,19 @@ const inputNodes = document.querySelectorAll("form")
 console.log(inputNodes);
 
 const inputUsername = document.querySelector("#username")
-console.log(inputUsername);
+
+const inputEmail = document.querySelector("#email")
+
 const inputPassword = document.querySelector("#password")
-console.log(inputPassword);
+
 
 const signUpBtn = document.querySelector("button")
-console.log(signUpBtn);
+
 
 signUpBtn.addEventListener("click", async (e) => {
   e.preventDefault()  
-  fetch("http://localhost:4321/auth/sign-in", {
+  console.log(inputPassword.value, inputUsername.value, inputEmail.value);
+  fetch("http://localhost:4321/auth/register", {
     method: "POST",
     credentials: "include",
     headers: {
@@ -23,6 +26,7 @@ signUpBtn.addEventListener("click", async (e) => {
     },
     body: JSON.stringify({
       username: inputUsername,
+      email: inputEmail,
       password: inputPassword
     }),
   }).then((response) => {

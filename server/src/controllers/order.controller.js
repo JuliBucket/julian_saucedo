@@ -9,8 +9,18 @@ export const createOrderCtrl = (req, res) => {
   res.status(201).json(order);
 };
 
-export const getOrdersCtrl = (_req, res) => {
+export const getOrdersCtrl = (req, res) => {
   const orders = getOrders();
 
   res.status(200).json(orders);
 };
+
+export const getOrderById = (req, res) => {
+  const { userId } = req.user.id
+  const { id } = req.params.id
+  try{
+
+  } catch{
+    
+  }
+}

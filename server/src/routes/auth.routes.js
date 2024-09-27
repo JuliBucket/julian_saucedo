@@ -3,6 +3,7 @@ import {
   signInCtrl,
   getMeCtrl,
   signUpCtrl,
+  createUserCtrl
 } from "../controllers/auth.controller.js";
 import { validateJwt } from "../middlewares/validateJwt.js";
 import {
@@ -15,6 +16,7 @@ const authRouter = Router();
 
 authRouter.post("/sign-in", signInValidation, applyValidations, signInCtrl);
 authRouter.post("/sign-up", signUpValidation, applyValidations, signUpCtrl);
+authRouter.post("/register", createUserCtrl, applyValidations)
 authRouter.get("/me", validateJwt, getMeCtrl);
 
 export { authRouter };

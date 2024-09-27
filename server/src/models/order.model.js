@@ -12,6 +12,7 @@ export const createOrder = (coffee, userId) => {
 
   ordersCollection.push(newOrder);
 
+  console.log(newOrder);
   return newOrder;
 };
 
