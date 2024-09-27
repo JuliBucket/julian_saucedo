@@ -24,7 +24,7 @@ export const signInCtrl = async (req, res) => {
 export const signUpCtrl = async (req, res) => {
   try {
     createUser(req.body)
-    res.json(createUser)
+    res.json({message: "anda"})
   } catch (error) {
     res.status(500).json({ message: error.message });
   }

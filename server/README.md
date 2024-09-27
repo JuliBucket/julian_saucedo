@@ -34,7 +34,7 @@
 
 ### Acciones a Realizar
 
-- [ ] (5 puntos) Implementar controlador de registro de usuarios.
+- [x] (5 puntos) Implementar controlador de registro de usuarios.
 - [ ] (5 puntos) Implementar controlador de cierre de sesión de usuarios.
 - [ ] (5 puntos) Implementar ruta de cierre de sesión de usuarios.
 - [ ] (5 puntos) Implementar validaciones de datos para las peticiones de las ordenes

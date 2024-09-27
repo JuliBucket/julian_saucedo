@@ -5,7 +5,7 @@ const usersCollection = [];
 
 // Función para crear un usuario
 export const createUser = async (user) => {
-  const { password } = user;
+  const { password, email} = user;
   const salt = await genSalt(10);
   const hashedPassword = await hash(password, salt);
 
@@ -13,6 +13,7 @@ export const createUser = async (user) => {
     // Generate a random id
     id: crypto.randomUUID().toString(),
     ...user,
+    email: email,
     password: hashedPassword,
   };
 
@@ -20,7 +21,6 @@ export const createUser = async (user) => {
 
   console.log(newUser);
   return newUser;
-  
 };
 
 // Función para obtener usuario por id
