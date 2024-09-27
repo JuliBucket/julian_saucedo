@@ -184,7 +184,7 @@ export function navbar(session = null) {
     logoutButton.textContent = "Logout";
 
     logoutButton.addEventListener("click", () => {
-      // ! HACER EL LOGOUT DEL USUARIO Y REDIRIGIR A LA PÁGINA DE LOGIN
+      
     });
 
     menuDiv.appendChild(logoutButton);

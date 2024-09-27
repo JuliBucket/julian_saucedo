@@ -18,7 +18,9 @@ export const createUser = async (user) => {
 
   usersCollection.push(newUser);
 
+  console.log(newUser);
   return newUser;
+  
 };
 
 // Función para obtener usuario por id

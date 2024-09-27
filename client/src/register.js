@@ -17,6 +17,7 @@ signUpBtn.addEventListener("click", async (e) => {
   e.preventDefault()  
   fetch("http://localhost:4321/auth/sign-in", {
     method: "POST",
+    credentials: "include",
     headers: {
       "Content-Type": "application/json",
     },
